@@ -4,6 +4,6 @@ d A set of three programs to facilitate developing
 d Stata commands that include Stata and Mata code
 d Germán Rodríguez <grodri@princeton.edu>
 d
-p mkado    Make and ado file from a manifest and code files
+p mkado    Make an ado file from a manifest and code files
 p mkload   Load one or all Mata functions to help testing
 p mksplit  Split an ado file into a manifest and code files
