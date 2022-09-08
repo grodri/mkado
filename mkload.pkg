@@ -1,0 +1,7 @@
+v 3
+d The mkload command with the name of a manifest clears Mata
+d and loads all the Mata functions listed. If called with the
+d name of a Mata function it capture drops it and loads it.
+d Distribution-Date: 9mar2019
+d
+f mkload.ado

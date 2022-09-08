@@ -1,0 +1,8 @@
+v 3
+d The mkado command reads a manifest file with a list of Stata
+d subcommands and Mata functions, each defined in a separate
+d file, and combines all the files into an ado command
+d 
+d Distribution-Date: 9mar2019
+d
+f mkado.ado

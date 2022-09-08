@@ -1,0 +1,8 @@
+v 3
+d The mksplit command reads an ado file and splits it into a 
+d manifest file and a separate file for each Stata subcommand 
+d and mata function. Uses a simple parser and may fail with
+d complex ado files.
+d Distribution-Date: 9mar2019
+d
+f mksplit.ado
