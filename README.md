@@ -1,4 +1,4 @@
-# mkado
+# Make Ado 
 
 This depository has a set of three commands that I have found useful in 
 maintaining the `markstat` source code. 
@@ -6,15 +6,17 @@ maintaining the `markstat` source code.
 ## `mkado`
 
 The basic idea is to split your program into one or more Stata subcommands
-and Mata functions, each of which can be tested and debugged on its own.
+and Mata functions, which you write in separate files so they can easily 
+be tested and debugged on their own.
 
 You then list them all in a *manifest*, using a `.` for Stata files and
 a `:` for Mata files. The manifest should have the same name as the command
-with extension `.mkm`. Here is the general idea:
+with extension `.mkm` and looks like this:
 
 ```
-program yourcommand
+program commandname
 	// start the command here, probably with the syntax
+	// and calls to Stata subcommands or Mata functions
 end
 
 ._asubcommand
@@ -27,11 +29,11 @@ end
 ```
 
 You then write the Stata subcommands and Mata functions, each in its own
-file: `_asubsommand.ado`, `_another.ado`, `a_mata_function.mata` and 
+file: `_asubcommand.ado`, `_another.ado`, `a_mata_function.mata` and 
 `another_one.mata`.
 
 The `mkado` command goes through the manifest and collates all these files
-into a single `.ado` file.
+into a single `.ado` file, which becomes your command.
  
  ## `mkload`
  
@@ -62,4 +64,16 @@ into a single `.ado` file.
  work on simple cases.
  
 This idea could be extended to ado files that include Python and Java code,
-but I have had no need for this.
+but I have had no need for this yet.
+
+## Installation
+
+To install directly from GitHub type in Stata
+
+```
+net from https://raw.githubusercontent.com/grodri/mkado/master/
+```
+
+This will print a short description of what's in the depository, with links 
+to describe each command (or type `net describe mkado`). Each description
+has a link to install the command (or type `net install mkado`).
